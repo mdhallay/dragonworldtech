@@ -110,6 +110,87 @@
             background-color: #f1f1f1;
             font-size: 14px;
         }
+
+        /* تنسيق للعناصر عند حجم شاشة أصغر (مثل الجوالات) */
+        @media (max-width: 768px) {
+            /* تنسيق العنوان الرئيسي */
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            header img {
+                height: 150px; /* تقليل حجم الصور في العنوان */
+                width: auto;
+                margin-bottom: 10px;
+            }
+
+            header h1 {
+                font-size: 22px; /* تصغير حجم النص */
+                margin-top: 10px;
+            }
+
+            /* تنسيق شريط التبويبات */
+            nav a {
+                padding: 10px 14px;
+                font-size: 16px;
+            }
+
+            /* الإعلانات */
+            .advertisement {
+                width: 100%;
+                height: auto;
+                padding: 10px 0;
+            }
+
+            .ad img {
+                width: 100%;
+                height: auto;
+            }
+
+            .ad p {
+                font-size: 18px;
+                padding: 5px;
+                top: 20%;
+            }
+        }
+
+        /* تنسيق للعناصر عند حجم شاشة أصغر (مثل الأجهزة المحمولة جداً) */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 18px; /* تصغير الحجم أكثر على الأجهزة الصغيرة */
+            }
+
+            nav a {
+                padding: 8px 12px; /* تقليص الحشو */
+                font-size: 14px; /* تصغير حجم الخط */
+            }
+
+            .advertisement {
+                height: auto;
+                padding: 5px 0;
+            }
+
+            .ad p {
+                font-size: 16px;
+                padding: 5px;
+                top: 30%; /* تغيير مكان النص */
+            }
+
+            .advertisement {
+                display: block;
+                margin-top: 20px;
+            }
+
+            .ad {
+                width: 100%;
+                height: 100%;
+            }
+
+            footer p {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -117,7 +198,7 @@
     <header>
         <img src="img/sdn.jpg" alt="صورة كاميرات المراقبة">
         <h1>مؤسسة عالم التنين لتقنية المعلومات</h1>
-        <img src="img/wireless-network.jpg" alt="صورة شبكات لاسلكية">
+        <img src="img/sdn.jpg" alt="صورة شبكات لاسلكية">
     </header>
 
     <!-- شريط التبويبات -->
@@ -174,17 +255,15 @@
             <img src="img/ee.jpg" alt="إعلان 10">
             <p>شبكة مايكروتك موثوقة وآمنة.</p>
         </div>
-<div class="ad">
+        <div class="ad">
             <img src="img/vv.jpg" alt="إعلان 10">
-            <p>متخصصون في صيانة ولحام الالياف الضوئية  .</p>
+            <p>متخصصون في صيانة ولحام الالياف الضوئية.</p>
         </div>
-<div class="ad">
+        <div class="ad">
             <img src="img/xx.jpg" alt="إعلان 10">
-            <p>تركيب ابراج الاتصالات   .</p>
+            <p>تركيب أبراج الاتصالات.</p>
         </div>
-
     </div>
-
 
     <section>
         <p>مرحبًا بكم في مؤسسة عالم التنين لتقنية المعلومات. نحن نقدم أفضل الخدمات في الشبكات، كاميرات المراقبة، الألياف الضوئية، وتقنيات المعلومات.</p>
