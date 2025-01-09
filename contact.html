@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة عالم التنين لتقنية المعلومات</title>
+    
+    <!-- إضافة خطوط -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+
+    <style>
+        /* محاذاة النصوص والعناصر إلى اليمين */
+        body {
+            direction: rtl;
+            text-align: right;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;  /* خلفية بيضاء للصفحة */
+        }
+
+        /* تنسيق العنوان */
+        header {
+                       background-size: cover;
+            background-position: center;
+            color: black;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 30px;
+            border-radius: 8px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+            position: relative;
+            font-family: 'B Jadid', sans-serif;
+            font-weight: bold;
+        }
+
+ header img {
+            height: 230px; /* ضبط ارتفاع الصورة */
+            width: auto; /* الحفاظ على نسبة الأبعاد */
+            border-radius: 8px; /* حواف دائرية */
+        }
+
+        nav {
+            background-color:black;
+            overflow: hidden;
+            position: relative;
+            z-index: 9999;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'B Jadid', sans-serif;
+        }
+
+        nav a:hover {
+            background-color: darkred;
+        }
+
+        .advertisement {
+            width: 100%;
+            height: 800px;
+            background-color: #f0f0f0;
+            position: fixed;
+            top: 220px;
+            left: 0;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .ad img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ad p {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 50px;
+            font-weight: bold;
+            color: black;
+            font-family: 'B Jadid', sans-serif;
+        }
+
+        section {
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+            font-size: 14px;
+        }
+
+        /* قسم التواصل معنا */
+        .contact-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .contact-container .intro {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+            font-family: 'Amiri', serif;
+        }
+
+        .contact-container .buttons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .contact-container .buttons a:hover {
+            background-color: #45a049;
+        }
+
+        .contact-container .message-box textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            font-size: 16px;
+        }
+
+        .contact-container .message-box button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-container .message-box button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/sdn.jpg" alt="صورة كاميرات المراقبة">
+        <h1>مؤسسة عالم التنين لتقنية المعلومات</h1>
+        <img src="img/sdn.jpg" alt="صورة شبكات لاسلكية">
+    </header>
+
+
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="network.html">حلول الشبكات</a>
+        <a href="camera.html">كاميرات المراقبة</a>
+        <a href="fiber.html">الألياف الضوئية</a>
+        <a href="informatique.html">تقنية المعلومات</a>
+        <a href="mikrotik.html">شبكات المايكروتك</a>
+        <a href="about.html">من نحن</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+
+    <section>
+        <p>هذه فقرة تحتوي على بعض النصوص بالعربية.</p>
+        <p>يمكنك تعديل هذه الصفحة حسب احتياجاتك.</p>
+    </section>
+
+    <!-- قسم التواصل معنا -->
+    <div class="contact-container">
+        <div class="intro">
+            مرحبًا بكم في مؤسسة عالم التنين لتقنية المعلومات. نسعد بخدمتكم وتقديم أفضل الحلول التقنية المتكاملة.
+        </div>
+        <div class="buttons">
+            <a href="https://wa.me/+966501360771" target="_blank">📱 التواصل مع المهندس عبر واتساب</a>
+            <a href="https://wa.me/+966564239000" target="_blank">📱 التواصل مع المؤسسة عبر واتساب</a>
+
+            <a href="https://www.youtube.com/@mouadhallay" target="_blank">🎥 قناتنا على يوتيوب</a>
+            <a href="https://twitter.com/YOUR_TWITTER_HANDLE" target="_blank">🐦 تابعنا على تويتر</a>
+        </div>
+        <div class="message-box">
+            <textarea id="message" placeholder="أدخل رسالتك هنا..."></textarea>
+            <button onclick="sendMessage()">إرسال الرسالة</button>
+        </div>
+    </div>
+
+    <footer>
+        <p> +966501360771-- +966564239000حقوق الطبع والنشر © 2025 مؤسسة عالم التنين لتقنية المعلومات للتواصل </p>
+    </footer>
+
+
+    <script>
+        function sendMessage() {
+            const message = document.getElementById('message').value.trim();
+            if (!message) {
+                alert('الرجاء إدخال رسالة قبل الإرسال.');
+                return;
+            }
+            const email = "mouadhallay@gmail.com";
+            const subject = "رسالة من صفحة تواصل معنا";
+            const body = encodeURIComponent(message);
+            window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${body}`;
+        }
+    </script>
+</body>
+</html>

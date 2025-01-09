@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة عالم التنين لتقنية المعلومات</title>
+
+    <!-- إضافة خط من Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* تنسيقات الصفحة العامة */
+        body {
+            direction: rtl;
+            text-align: right;
+            font-family: 'B Jadid', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        /* تنسيق العنوان الرئيسي */
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        header img {
+            height: 240px;
+            width: auto;
+            border-radius: 8px;
+        }
+
+        /* شريط التبويبات */
+        nav {
+            background-color: black;
+            overflow: hidden;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'B Jadid', sans-serif;
+        }
+
+        nav a:hover {
+            background-color: darkred;
+        }
+
+        /* نافذة الإعلانات الثابتة */
+        .advertisement {
+            width:80%;
+            height: 800px;
+            background-color: #f0f0f0;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ad {
+            width: 100%;
+            height: 100%;
+            display: none;
+            position: absolute;
+        }
+
+        .ad img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ad p {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* المحتوى الرئيسي */
+        section {
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* التذييل */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="img/sdn.jpg" alt="صورة كاميرات المراقبة">
+        <h1>مؤسسة عالم التنين لتقنية المعلومات</h1>
+        <img src="img/wireless-network.jpg" alt="صورة شبكات لاسلكية">
+    </header>
+
+    <!-- شريط التبويبات -->
+    <nav>
+        <a href="home.html">الرئيسية</a>
+        <a href="network.html">حلول الشبكات</a>
+        <a href="camera.html">كاميرات المراقبة</a>
+        <a href="fiber.html">الألياف الضوئية</a>
+        <a href="informatique.html">تقنية المعلومات</a>
+        <a href="mikrotik.html">شبكات المايكروتك</a>
+        <a href="about.html">من نحن</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+
+    <!-- نافذة الإعلانات -->
+    <div class="advertisement">
+        <div class="ad">
+            <img src="img/network.jpg" alt="إعلان 1">
+            <p>عرض خاص على حلول الشبكات!</p>
+        </div>
+        <div class="ad">
+            <img src="img/cam2.jpg" alt="إعلان 2">
+            <p>خصومات ضخمة على كاميرات المراقبة!</p>
+        </div>
+        <div class="ad">
+            <img src="img/fiber.jpg" alt="إعلان 3">
+            <p>أفضل خدمات الألياف الضوئية لدينا.</p>
+        </div>
+        <div class="ad">
+            <img src="img/mm.jpg" alt="إعلان 4">
+            <p>استمتع بخدمات تقنية المعلومات المميزة.</p>
+        </div>
+        <div class="ad">
+            <img src="img/mikrotik.png" alt="إعلان 5">
+            <p>عروض مغرية لشبكات المايكروتك.</p>
+        </div>
+        <div class="ad">
+            <img src="img/network.jpg" alt="إعلان 6">
+            <p>اطلب الآن حلول شبكات مبتكرة.</p>
+        </div>
+        <div class="ad">
+            <img src="img/zz.jpg" alt="إعلان 7">
+            <p>أحدث تقنيات كاميرات المراقبة.</p>
+        </div>
+        <div class="ad">
+            <img src="img/fiberx.jpg" alt="إعلان 8">
+            <p>خدمات الألياف الضوئية السريعة.</p>
+        </div>
+        <div class="ad">
+            <img src="img/informatique.jpg" alt="إعلان 9">
+            <p>استشارات تقنية المعلومات المتكاملة.</p>
+        </div>
+        <div class="ad">
+            <img src="img/ee.jpg" alt="إعلان 10">
+            <p>شبكة مايكروتك موثوقة وآمنة.</p>
+        </div>
+<div class="ad">
+            <img src="img/vv.jpg" alt="إعلان 10">
+            <p>متخصصون في صيانة ولحام الالياف الضوئية  .</p>
+        </div>
+<div class="ad">
+            <img src="img/xx.jpg" alt="إعلان 10">
+            <p>تركيب ابراج الاتصالات   .</p>
+        </div>
+
+    </div>
+
+
+    <section>
+        <p>مرحبًا بكم في مؤسسة عالم التنين لتقنية المعلومات. نحن نقدم أفضل الخدمات في الشبكات، كاميرات المراقبة، الألياف الضوئية، وتقنيات المعلومات.</p>
+        <p>لا تترددوا في التواصل معنا لمعرفة المزيد عن خدماتنا.</p>
+    </section>
+
+    <footer>
+        <p>حقوق الطبع والنشر &copy; 2025 مؤسسة عالم التنين لتقنية المعلومات</p>
+        <p>للتواصل: +966501360771 - +966564239000</p>
+    </footer>
+
+    <script>
+        // عرض الإعلانات بالتناوب
+        var ads = document.querySelectorAll('.ad');
+        var currentAdIndex = 0;
+
+        function showAd(index) {
+            ads.forEach((ad, i) => {
+                ad.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function changeAd() {
+            currentAdIndex = (currentAdIndex + 1) % ads.length;
+            showAd(currentAdIndex);
+        }
+
+        window.onload = function() {
+            showAd(currentAdIndex);
+            setInterval(changeAd, 5000);
+        };
+    </script>
+
+</body>
+</html>

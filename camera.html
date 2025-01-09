@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة عالم التنين لتقنية المعلومات</title>
+    
+    <!-- إضافة خط من Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* محاذاة النصوص والعناصر إلى اليمين */
+        body {
+            direction: rtl;
+            text-align: right;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;  /* خلفية بيضاء للصفحة */
+        }
+
+        /* تنسيق العنوان */
+        header {
+                       background-size: cover;  /* تغطية كامل المساحة */
+            background-position: center;  /* محاذاة الشعار في المنتصف */
+            color: black;  /* لون النص أبيض */
+            padding: 40px 15px;  /* زيادة المسافة الداخلية */
+            text-align: center;  /* محاذاة النص في المنتصف */
+            font-size: 30px;  /* حجم الخط أكبر */
+            border-radius: 8px;  /* حواف دائرية */
+            height: 160px;  /* تكبير مستطيل العنوان */
+            display: flex;  /* استخدام flexbox لترتيب العناصر */
+            justify-content: center;  /* محاذاة النص في المنتصف أفقيًا */
+            align-items: center;  /* محاذاة النص في المنتصف عموديًا */
+            z-index: 1001;  /* تأكيد أن العنوان فوق نافذة الإعلانات */
+            position: relative;  /* إضافة position relative لضمان بقاء العنوان فوق الإعلانات */
+            font-family: 'B Jadid', sans-serif;  /* استخدام خط Poppins */
+            font-weight: bold;  /* جعل الخط عريض */
+        }
+header img {
+            height: 230px; /* ضبط ارتفاع الصورة */
+            width: auto; /* الحفاظ على نسبة الأبعاد */
+            border-radius: 8px; /* حواف دائرية */
+        }
+
+
+        /* تنسيق التبويبات (القائمة) */
+        nav {
+            background-color: black;  /* خلفية حمراء للتبويبات */
+            overflow: hidden;  /* إخفاء أي محتوى زائد */
+            position: relative;  /* إضافة position relative لضمان ظهورها فوق الإعلانات */
+            z-index: 9999;  /* التأكد من أن شريط التبويبات يظهر فوق الإعلانات */
+        }
+
+        /* تنسيق العناصر داخل التبويبات */
+        nav a {
+            display: inline-block;
+            color: white;  /* لون النص أبيض */
+            text-align: center;  /* محاذاة النص في المنتصف */
+            padding: 14px 20px;  /* المسافة داخل التبويب */
+            text-decoration: none;  /* إزالة التحته */
+            font-size: 18px;  /* حجم النص للتبويبات */
+ font-family: 'B Jadid', sans-serif;  /* استخدام خط Poppins */
+
+        }
+
+        /* تغيير اللون عند مرور الماوس */
+        nav a:hover {
+            background-color: darkred;  /* تغيير اللون عند التمرير على التبويب */
+        }
+
+        /* تنسيق نافذة الإعلانات الثابتة */
+        .advertisement {
+            width: 100%;  /* عرض الصفحة */
+            height:800px;  /* تكبير الارتفاع 5 مرات */
+            background-color: #f0f0f0;  /* خلفية فاتحة */
+            position: fixed;  /* جعل النافذة ثابتة */
+            top: 220px;  /* تحديد المسافة من الأعلى لتكون تحت شريط التبويبات والعنوان */
+            left: 0;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px;
+            z-index: 1000;  /* التأكد من أن نافذة الإعلانات تحت شريط التبويبات */
+            overflow: hidden;
+        }
+
+        /* تنسيق الإعلانات المتغيرة */
+        .ad {
+            width: 100%;  /* عرض الإعلان ليمتلئ مربع الإعلانات */
+            height: 100%;  /* ارتفاع الإعلان ليمتلئ مربع الإعلانات */
+            background-color: #ff5722;  /* لون خلفية الإعلانات */
+            color: white;
+            font-size: 18px;
+            margin-left: 20px;
+            display: inline-block;
+            text-align: center;
+            position: relative;  /* إضافة position relative للعناصر الداخلية */
+        }
+
+        /* تنسيق الصورة داخل الإعلان لتغطية المساحة بالكامل */
+        .ad img {
+            width: 100%;  /* عرض الصورة لتغطية كامل العرض */
+            height: 100%;  /* ارتفاع الصورة لتغطية كامل الارتفاع */
+            object-fit: cover;  /* جعل الصورة تملأ المساحة مع الحفاظ على نسبتها الأصلية */
+            display: block;  /* جعل الصورة عنصراً كتلة */
+        }
+
+        /* تنسيق النص داخل الإعلان */
+        .ad p {
+            position: absolute;
+            top: 10%;  /* تحديد المسافة من الأعلى */
+            left: 50%;  /* محاذاة النص في المنتصف */
+            transform: translateX(-50%);  /* ضمان محاذاة النص بشكل دقيق */
+            font-size: 50px;  /* حجم النص */
+            font-weight: bold;  /* جعل النص عريض */
+            color: black;  /* لون النص أبيض */
+            font-family: 'B Jadid', sans-serif;  /* استخدام خط Poppins */
+        }
+
+        /* تنسيق المحتوى */
+        section {
+            padding: 20px;
+            margin-top: 50px;  /* إضافة مساحة لتجنب التداخل */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/sdn.jpg" alt="صورة كاميرات المراقبة  style="width:60%; max-height:500px; margin-bottom:10px; border-radius:8px;">
+        <h1>مؤسسة عالم التنين لتقنية المعلومات</h1>
+        <img src="img/sdn.jpg" alt="صورة شبكات لاسلكية">
+    </header>
+
+
+    <!-- تبويبات (القائمة) -->
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="network.html">حلول الشبكات</a>
+        <a href="camera.html">كاميرات المراقبة</a>
+        <a href="fiber.html">الألياف الضوئية</a>
+        <a href="informatique.html">تقنية المعلومات</a>
+        <a href="mikrotik.html">شبكات المايكروتك</a>
+        <a href="about.html">من نحن</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+
+    
+    <section>
+    <h2>كاميرات المراقبة</h2>
+<img src="img/cams.jpg" alt="تصميم الشبكات" style="width:60%; max-height:500px; margin-bottom:10px; border-radius:8px;">
+    <p style="font-size: 18px;">
+        كاميرات المراقبة تُعتبر من أهم الوسائل التقنية المستخدمة لضمان الأمان والمراقبة المستمرة للمواقع المختلفة، سواء كانت منازل، شركات، أو أماكن عامة. فهي تُسهم في حماية الممتلكات، منع الجرائم، وتوثيق الأحداث بشكل دقيق.
+    </p>
+
+    <h3>طريقة عمل كاميرات المراقبة</h3>
+<img src="img/cams2.jpg" alt="تصميم الشبكات" style="width:60%; max-height:500px; margin-bottom:10px; border-radius:8px;">
+
+    <p style="font-size: 18px;">
+        تعمل كاميرات المراقبة عن طريق التقاط الصور والفيديوهات باستخدام عدسات متطورة، وتحويل هذه الإشارات إلى إشارات رقمية يتم تخزينها أو بثها عبر شبكات الإنترنت أو أنظمة تخزين محلية. يمكن ربطها بأجهزة تسجيل أو أنظمة سحابية لمراجعة التسجيلات لاحقًا.
+    </p>
+
+    <h3>أهمية كاميرات المراقبة</h3>
+<img src="img/cams3.jpg" alt="تصميم الشبكات" style="width:60%; max-height:500px; margin-bottom:10px; border-radius:8px;">
+
+    <p style="font-size: 18px;">
+        - **الحماية:** تمنع الجرائم من خلال مراقبة المواقع على مدار الساعة.<br>
+        - **الأدلة:** توفر تسجيلات يمكن استخدامها كأدلة في القضايا القانونية.<br>
+        - **المراقبة عن بُعد:** تمكن المستخدمين من متابعة ممتلكاتهم أو أعمالهم من أي مكان في العالم.<br>
+        - **إدارة الموظفين:** تستخدم في بيئات العمل لمراقبة الأداء وضمان الالتزام.<br>
+    </p>
+
+    <h3>أنواع كاميرات المراقبة</h3>
+<img src="img/cams4.jpg" alt="تصميم الشبكات" style="width:60%; max-height:500px; margin-bottom:10px; border-radius:8px;">
+
+    <p style="font-size: 18px;">
+        - **الكاميرات الداخلية:** تُستخدم داخل المباني لمراقبة الغرف والمساحات المغلقة.<br>
+        - **الكاميرات الخارجية:** مصممة لتحمل الظروف الجوية وتُستخدم لمراقبة المداخل أو المناطق الخارجية.<br>
+        - **الكاميرات السلكية:** تعتمد على كابلات لنقل البيانات والطاقة.<br>
+        - **الكاميرات اللاسلكية (Wi-Fi):** تستخدم الشبكات اللاسلكية لنقل البيانات.<br>
+        - **كاميرات PTZ (التدوير والإمالة والتكبير):** توفر مرونة في التحكم بالاتجاه وزاوية الرؤية.<br>
+        - **كاميرات الرؤية الليلية:** مزودة بتقنية الأشعة تحت الحمراء لتسجيل الفيديو في الظلام.<br>
+        - **الكاميرات الذكية:** تعتمد على الذكاء الاصطناعي للتعرف على الوجوه والحركات المشبوهة.<br>
+    </p>
+
+    <h3>كيفية تركيب كاميرات المراقبة</h3>
+<img src="img/cams5.jpg" alt="تصميم الشبكات" style="width:60%; max-height:500px; margin-bottom:10px; border-radius:8px;">
+
+    <p style="font-size: 18px;">
+        1. **اختيار الموقع المناسب:** تحديد المواقع التي تحتاج إلى مراقبة، مثل المداخل، الممرات، أو الغرف.<br>
+        2. **تثبيت الكاميرا:** تركيب الكاميرا باستخدام الحوامل المخصصة مع ضمان توجيه العدسة نحو المنطقة المراد مراقبتها.<br>
+        3. **التوصيل:** توصيل الكاميرات بالسيرفر أو جهاز التسجيل باستخدام الكابلات أو الشبكات اللاسلكية.<br>
+        4. **اختبار النظام:** التأكد من أن الكاميرا تعمل بشكل صحيح وتغطي الزوايا المطلوبة.<br>
+    </p>
+
+    <h3>كيفية برمجة كاميرات المراقبة</h3>
+<img src="img/cams6.jpg" alt="تصميم الشبكات" style="width:60%; max-height:500px; margin-bottom:10px; border-radius:8px;">
+
+    <p style="font-size: 18px;">
+        - **الإعداد الأساسي:** الدخول إلى إعدادات الكاميرا عبر واجهة المستخدم باستخدام الحاسوب أو الهاتف المحمول.<br>
+        - **ضبط الشبكة:** إعداد عنوان IP وربط الكاميرا بشبكة الإنترنت أو الشبكة الداخلية.<br>
+        - **إعداد التسجيل:** اختيار طريقة التسجيل (مستمر أو عند اكتشاف حركة) وتحديد أماكن تخزين البيانات.<br>
+        - **التكامل مع التطبيقات:** استخدام التطبيقات الخاصة بالكاميرا لعرض البث المباشر أو مراجعة التسجيلات.<br>
+    </p>
+
+    <h3>كيفية صيانة كاميرات المراقبة</h3>
+<img src="img/cams7.jpg" alt="تصميم الشبكات" style="width:60%; max-height:500px; margin-bottom:10px; border-radius:8px;">
+
+    <p style="font-size: 18px;">
+        - **الفحص الدوري:** التأكد من نظافة العدسة وخلوها من الغبار أو العوائق.<br>
+        - **تحديث البرامج:** تحديث نظام التشغيل الخاص بالكاميرا لتحسين الأداء وحل المشاكل الأمنية.<br>
+        - **فحص الكابلات:** التحقق من سلامة الكابلات وضمان الاتصال الصحيح.<br>
+        - **إصلاح الأعطال:** التعامل مع أي أعطال تقنية فور حدوثها، مثل توقف التسجيل أو انقطاع الإشارة.<br>
+        - **استبدال الأجزاء التالفة:** مثل العدسات، أو وحدات التخزين عند الحاجة.<br>
+    </p>
+</section>
+
+
+   
+
+    <script>
+        // تحديد الإعلانات
+        var ads = document.querySelectorAll('.ad');
+        var currentAdIndex = 0;
+
+        // إظهار الإعلان الحالي
+        function showAd(index) {
+            for (var i = 0; i < ads.length; i++) {
+                ads[i].style.display = 'none';  // إخفاء جميع الإعلانات
+            }
+            ads[index].style.display = 'inline-block';  // إظهار الإعلان الحالي
+        }
+
+        // تغيير الإعلان كل 5 ثواني
+        function changeAd() {
+            currentAdIndex = (currentAdIndex + 1) % ads.length;  // الانتقال إلى الإعلان التالي
+            showAd(currentAdIndex);  // عرض الإعلان التالي
+        }
+
+        // بدء عرض الإعلانات عند تحميل الصفحة
+        window.onload = function() {
+            showAd(currentAdIndex);  // عرض أول إعلان عند تحميل الصفحة
+            setInterval(changeAd, 5000);  // تغيير الإعلان كل 5 ثواني
+        };
+    </script>
+<footer>
+        <p> +966501360771-- +966564239000حقوق الطبع والنشر © 2025 مؤسسة عالم التنين لتقنية المعلومات للتواصل </p>
+    </footer>
+
+
+</body>
+</html>

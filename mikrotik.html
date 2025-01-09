@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة عالم التنين لتقنية المعلومات</title>
+    
+    <!-- إضافة خط من Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* محاذاة النصوص والعناصر إلى اليمين */
+        body {
+            direction: rtl;
+            text-align: right;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;  /* خلفية بيضاء للصفحة */
+        }
+
+        /* تنسيق العنوان */
+        header {
+                        background-size: cover;  /* تغطية كامل المساحة */
+            background-position: center;  /* محاذاة الشعار في المنتصف */
+            color: black;  /* لون النص أبيض */
+            padding: 40px 20px;  /* زيادة المسافة الداخلية */
+            text-align: center;  /* محاذاة النص في المنتصف */
+            font-size: 30px;  /* حجم الخط أكبر */
+            border-radius: 8px;  /* حواف دائرية */
+            height: 150px;  /* تكبير مستطيل العنوان */
+            display: flex;  /* استخدام flexbox لترتيب العناصر */
+            justify-content: center;  /* محاذاة النص في المنتصف أفقيًا */
+            align-items: center;  /* محاذاة النص في المنتصف عموديًا */
+            z-index: 1001;  /* تأكيد أن العنوان فوق نافذة الإعلانات */
+            position: relative;  /* إضافة position relative لضمان بقاء العنوان فوق الإعلانات */
+            font-family: 'B Jadid', sans-serif;  /* استخدام خط Poppins */
+            font-weight: bold;  /* جعل الخط عريض */
+        }
+  header img {
+            height: 230px; /* ضبط ارتفاع الصورة */
+            width: auto; /* الحفاظ على نسبة الأبعاد */
+            border-radius: 8px; /* حواف دائرية */
+        }
+
+
+
+        /* تنسيق التبويبات (القائمة) */
+        nav {
+            background-color: black;  /* خلفية حمراء للتبويبات */
+            overflow: hidden;  /* إخفاء أي محتوى زائد */
+            position: relative;  /* إضافة position relative لضمان ظهورها فوق الإعلانات */
+            z-index: 9999;  /* التأكد من أن شريط التبويبات يظهر فوق الإعلانات */
+        }
+
+        /* تنسيق العناصر داخل التبويبات */
+        nav a {
+            display: inline-block;
+            color: white;  /* لون النص أبيض */
+            text-align: center;  /* محاذاة النص في المنتصف */
+            padding: 14px 20px;  /* المسافة داخل التبويب */
+            text-decoration: none;  /* إزالة التحته */
+            font-size: 18px;  /* حجم النص للتبويبات */
+            font-family: 'B Jadid', sans-serif;  /* استخدام خط Poppins */
+        }
+
+        /* تغيير اللون عند مرور الماوس */
+        nav a:hover {
+            background-color: darkred;  /* تغيير اللون عند التمرير على التبويب */
+        }
+
+        /* تنسيق نافذة الإعلانات الثابتة */
+        .advertisement {
+            width: 100%;  /* عرض الصفحة */
+            height:800px;  /* تكبير الارتفاع 5 مرات */
+            background-color: #f0f0f0;  /* خلفية فاتحة */
+            position: fixed;  /* جعل النافذة ثابتة */
+            top: 220px;  /* تحديد المسافة من الأعلى لتكون تحت شريط التبويبات والعنوان */
+            left: 0;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px;
+            z-index: 1000;  /* التأكد من أن نافذة الإعلانات تحت شريط التبويبات */
+            overflow: hidden;
+        }
+
+        /* تنسيق الإعلانات المتغيرة */
+        .ad {
+            width: 100%;  /* عرض الإعلان ليمتلئ مربع الإعلانات */
+            height: 100%;  /* ارتفاع الإعلان ليمتلئ مربع الإعلانات */
+            background-color: #ff5722;  /* لون خلفية الإعلانات */
+            color: white;
+            font-size: 18px;
+            margin-left: 20px;
+            display: inline-block;
+            text-align: center;
+            position: relative;  /* إضافة position relative للعناصر الداخلية */
+        }
+
+        /* تنسيق الصورة داخل الإعلان لتغطية المساحة بالكامل */
+        .ad img {
+            width: 100%;  /* عرض الصورة لتغطية كامل العرض */
+            height: 100%;  /* ارتفاع الصورة لتغطية كامل الارتفاع */
+            object-fit: cover;  /* جعل الصورة تملأ المساحة مع الحفاظ على نسبتها الأصلية */
+            display: block;  /* جعل الصورة عنصراً كتلة */
+        }
+
+        /* تنسيق النص داخل الإعلان */
+        .ad p {
+            position: absolute;
+            top: 10%;  /* تحديد المسافة من الأعلى */
+            left: 50%;  /* محاذاة النص في المنتصف */
+            transform: translateX(-50%);  /* ضمان محاذاة النص بشكل دقيق */
+            font-size: 50px;  /* حجم النص */
+            font-weight: bold;  /* جعل النص عريض */
+            color: black;  /* لون النص أبيض */
+            font-family: 'B Jadid', sans-serif;  /* استخدام خط Poppins */
+        }
+
+        /* تنسيق المحتوى */
+        section {
+            padding: 20px;
+            margin-top: 50px;  /* إضافة مساحة لتجنب التداخل */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+   <header>
+        <img src="img/sdn.jpg" alt="صورة كاميرات المراقبة">
+        <h1>مؤسسة عالم التنين لتقنية المعلومات</h1>
+        <img src="img/sdn.jpg" alt="صورة شبكات لاسلكية">
+    </header>
+
+
+    <!-- تبويبات (القائمة) -->
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="network.html">حلول الشبكات</a>
+        <a href="camera.html">كاميرات المراقبة</a>
+        <a href="fiber.html">الألياف الضوئية</a>
+        <a href="informatique.html">تقنية المعلومات</a>
+        <a href="mikrotik.html">شبكات المايكروتك</a>
+        <a href="about.html">من نحن</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+
+    <section>
+        <h2>شبكات المايكروتك</h2>
+<img src="img/mikro1.png" alt="تصميم الشبكات" style="width:60%; max-height:500px; margin-bottom:10px; border-radius:8px;">
+
+        <p style="font-size: 18px;">شبكات المايكروتك (MikroTik) هي أنظمة شبكية تستخدم لأغراض متنوعة مثل الربط بين الأجهزة، إدارة الإنترنت، ومراقبة الشبكة. تُعد MikroTik واحدة من أكثر الحلول فعالية من حيث التكلفة في مجالات الشبكات المختلفة.</p>
+
+        <h3>أهمية شبكات المايكروتك</h3>
+<img src="img/mikro2.jpg" alt="تصميم الشبكات" style="width:60%; max-height:500px; margin-bottom:10px; border-radius:8px;">
+
+        <p style="font-size: 18px;">تعتبر شبكات المايكروتك ضرورية لعدة أسباب، من أبرزها:</p>
+        <ul style="font-size: 18px;">
+            <li>المرونة العالية في إدارة الشبكات والتحكم في تدفق البيانات.</li>
+            <li>القدرة على تخصيص السياسات الأمنية من خلال جدران الحماية (Firewall) والمراقبة الحية للشبكة.</li>
+            <li>توفر حلول اقتصادية للأعمال الصغيرة والمتوسطة.</li>
+            <li>سهولة التوسع والتحديث مع النمو المستقبلي للشبكة.</li>
+        </ul>
+
+        <h3>طريقة برمجة شبكات المايكروتك</h3>
+<img src="img/mikro3.jpg" alt="تصميم الشبكات" style="width:60%; max-height:500px; margin-bottom:10px; border-radius:8px;">
+
+        <p style="font-size: 18px;">يمكن برمجة شبكات المايكروتك باستخدام جهاز RouterOS من MikroTik. يتم من خلاله تحديد إعدادات الشبكة، مثل إعدادات الـ IP و الـ DNS، إضافة جدران الحماية، وإنشاء VPNات، وإدارة عرض النطاق الترددي (Bandwidth).</p>
+        <ul style="font-size: 18px;">
+            <li>تثبيت RouterOS على أجهزة MikroTik أو استخدام أجهزة MikroTik الجاهزة.</li>
+            <li>إعداد البروتوكولات مثل DHCP و DNS و VPN.</li>
+            <li>إعداد الفلاتر لتحديد الأذونات (Access Control Lists) والسياسات الأمنية.</li>
+            <li>التحكم في حركة مرور الشبكة باستخدام أدوات QoS و Load Balancing.</li>
+        </ul>
+
+        <h3>طريقة تركيب شبكات المايكروتك</h3>
+<img src="img/mikro4.jpg" alt="تصميم الشبكات" style="width:60%; max-height:500px; margin-bottom:10px; border-radius:8px;">
+
+        <p style="font-size: 18px;">يتطلب تركيب شبكات المايكروتك إعداد الأجهزة المناسبة مثل أجهزة التوجيه (Router) والمفاتيح (Switches) المتوافقة مع MikroTik، إضافة إلى تمديد الكابلات الخاصة بالشبكة وتوصيلها وفقًا للمخطط المطلوب. من ثم، يتم تكوين الأجهزة وفقًا لإعدادات النظام.</p>
+        
+        <h3>صيانة شبكات المايكروتك</h3>
+<img src="img/mikro5.jpg" alt="تصميم الشبكات" style="width:60%; max-height:500px; margin-bottom:10px; border-radius:8px;">
+
+        <p style="font-size: 18px;">صيانة شبكات المايكروتك تشمل فحص الأجهزة بشكل دوري، تحديث النظام (RouterOS)، مراقبة الأداء باستخدام أدوات المراقبة (مثل SNMP و WinBox)، وإصلاح الأعطال التي قد تحدث في الأجهزة أو الشبكة.</p>
+    </section>
+
+        <script>
+        // تحديد الإعلانات
+        var ads = document.querySelectorAll('.ad');
+        var currentAdIndex = 0;
+
+        // إظهار الإعلان الحالي
+        function showAd(index) {
+            for (var i = 0; i < ads.length; i++) {
+                ads[i].style.display = 'none';  // إخفاء جميع الإعلانات
+            }
+            ads[index].style.display = 'inline-block';  // إظهار الإعلان الحالي
+        }
+
+        // تغيير الإعلان كل 5 ثواني
+        function changeAd() {
+            currentAdIndex = (currentAdIndex + 1) % ads.length;  // الانتقال إلى الإعلان التالي
+            showAd(currentAdIndex);  // عرض الإعلان التالي
+        }
+
+        // بدء عرض الإعلانات عند تحميل الصفحة
+        window.onload = function() {
+            showAd(currentAdIndex);  // عرض أول إعلان عند تحميل الصفحة
+            setInterval(changeAd, 5000);  // تغيير الإعلان كل 5 ثواني
+        };
+    </script>
+<footer>
+        <p> +966501360771-- +966564239000حقوق الطبع والنشر © 2025 مؤسسة عالم التنين لتقنية المعلومات للتواصل </p>
+    </footer>
+
+</body>
+</html>
